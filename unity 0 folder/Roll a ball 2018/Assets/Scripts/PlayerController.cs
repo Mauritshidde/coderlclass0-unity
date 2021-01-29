@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
 
         if (player.transform.position.y <= -12.37)
         {
-            SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
+            transform.position = new Vector3(0, 0.75f, 0);
         }
 
 
@@ -105,6 +105,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Kill")
         {
             SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
+            transform.position = new Vector3(110, 22f, 40);
         }
     }
     IEnumerator ExampleCoroutine()
